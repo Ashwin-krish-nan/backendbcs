@@ -17,7 +17,7 @@ const PORT = process.env.PORT;
 //=============> MIDDLEWARES
 
 app.use(cors({
-  origin: "backendbcs-fo2j.vercel.app",
+  origin: "http://localhost:3000",
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   allowedHeaders: ['Content-Type', "Authorization", "Access-Control-Allow-Credentials", "Access-Control-Allow-Origin"],
   credentials: true

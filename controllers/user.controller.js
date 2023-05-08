@@ -64,8 +64,8 @@ exports.userLogin = async (req, res) => {
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: 'ace.legal.services.official@gmail.com',
-        pass: 'cwzwapjwwwfxkyxy'
+        user: 'bcs.legal.services.official@gmail.com',
+        pass: 'etklvlfncmmdjmia'
     }
 });
 
@@ -73,7 +73,7 @@ const sendOTPVerificationEmail = async ({ _id, email }, res) => {
     try {
         const otp = `${1000 + Math.floor(Math.random() * 1000)}`;
         const mailOptions = {
-            from: "ace.legal.services.official@gmail.com",
+            from: "bcs.legal.services.official@gmail.com",
             to: email,
             subject: "Verify your email",
             html: emailTemplate.otpEmail(otp), // html body
@@ -143,7 +143,7 @@ exports.forgotPassword = async (req, res) => {
 
     try {
         const mailOptions = {
-            from: "ace.legal.services.official@gmail.com",
+            from: "bcs.legal.services.official@gmail.com",
             to: email,
             subject: "Reset Password",
             html: emailTemplate.resetPassword(userName, url)// html body
