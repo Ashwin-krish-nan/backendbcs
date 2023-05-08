@@ -17,11 +17,12 @@ const PORT = process.env.PORT;
 //=============> MIDDLEWARES
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "backendbcs-fo2j.vercel.app",
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   allowedHeaders: ['Content-Type', "Authorization", "Access-Control-Allow-Credentials", "Access-Control-Allow-Origin"],
   credentials: true
 }));
+app.use(express.json())
 
 //=============> Testing endpoint
 app.get('/', (req, res) => res.send({ Message: 'BCS server working fine' }))
