@@ -8,11 +8,15 @@ const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
     service: "gmail",
+     host: 'smtp.gmail.com',
+   port: 465,
+   secure: true,
     auth: {
-        user: 'Ace.Legal.Services.official@gmail.com',
-        pass: 'cwzwapjwwwfxkyxy'
+        user: 'bcs.legal.services.official@gmail.com',
+        pass: 'etklvlfncmmdjmia'
     }
 });
+
 
 exports.addAppointment = async (req, res) => {
     let payload = req.body;

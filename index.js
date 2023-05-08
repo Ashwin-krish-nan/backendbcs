@@ -17,12 +17,11 @@ const PORT = process.env.PORT;
 //=============> MIDDLEWARES
 
 app.use(cors({
-  origin: "https://acelegalservices.vercel.app",
+  origin: "http://localhost:3000",
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   allowedHeaders: ['Content-Type', "Authorization", "Access-Control-Allow-Credentials", "Access-Control-Allow-Origin"],
   credentials: true
 }));
-app.use(express.json())
 
 //=============> Testing endpoint
 app.get('/', (req, res) => res.send({ Message: 'BCS server working fine' }))

@@ -6,11 +6,15 @@ const LawyerModel = require("../model/lawyer.model");
 
 const transporter = nodemailer.createTransport({
     service: "gmail",
+     host: 'smtp.gmail.com',
+   port: 465,
+   secure: true,
     auth: {
-        user: 'ace.legal.services.official@gmail.com',
-        pass: 'cwzwapjwwwfxkyxy'
+        user: 'bcs.legal.services.official@gmail.com',
+        pass: 'etklvlfncmmdjmia'
     }
 });
+
 
 exports.lawyerLogin = async (req, res) => {
     const {email,password}=req.body;
